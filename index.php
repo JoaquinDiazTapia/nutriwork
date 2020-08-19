@@ -88,6 +88,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
           </select>
           <input type="text" name="area" placeholder="Área" value="">
           <input type="text" name="mail" placeholder="Mail Corporativo" value="">
+          <input type="text" name="telefono" placeholder="Teléfono" value="">
           <div class="submit_container">
           <input class="submit" type="submit" value="Inscribirme">
         </div>
@@ -123,8 +124,9 @@ $apellido=$_POST["apellido"];
 $empresa=$_POST["empresa"];
 $area=$_POST["area"];
 $mail=$_POST["mail"];
+$telefono=$_POST["telefono"];
 
-$sql = "INSERT INTO infoCon(nombre,apellido,empresa,area,mail) VALUES ('$nombre','$apellido','$empresa','$area','$mail')";
+$sql = "INSERT INTO infoCon(nombre,apellido,empresa,area,mail,telefono) VALUES ('$nombre','$apellido','$empresa','$area','$mail','$telefono')";
 
 if (mysqli_query($conn, $sql)) {
     $SIPS = "Se te ha añadido con éxito";
