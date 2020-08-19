@@ -56,8 +56,9 @@ function validateForm() {
     alert("Nombre, apellido, área y empresa solo pueden contener letras");
     return false;
   }
+  var valmail  = new RegExp("^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$");
   if (
-    !/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(
+    !valmail.test(
       mail.val()
     )
   ) {
